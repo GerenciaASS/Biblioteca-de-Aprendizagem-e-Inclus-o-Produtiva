@@ -442,8 +442,8 @@
   <nav class="menu" aria-label="Navegação principal">
     <ul>
       <li><a href="#destaque">Destaque</a></li>
+      <li><a href="#aprendizagem">Aprendizagem profissional</a></li>
       <li><a href="#legislacao">Legislação</a></li>
-      <li><a href="#atencao">Pontos de atenção</a></li>
       <li><a href="#assistencia">Assistência social</a></li>
       <li><a href="#estrategicos">Temas estratégicos</a></li>
       <li><a href="#consulta">Consulta rápida</a></li>
@@ -469,6 +469,7 @@
 
       <div class="filtros" aria-label="Filtros por categoria">
         <button class="filtro ativo" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+        <button class="filtro" type="button" data-filtro="aprendizagem" aria-pressed="false">Aprendizagem</button>
         <button class="filtro" type="button" data-filtro="legislacao" aria-pressed="false">Legislação</button>
         <button class="filtro" type="button" data-filtro="assistencia" aria-pressed="false">Assistência social</button>
         <button class="filtro" type="button" data-filtro="estrategico" aria-pressed="false">Temas estratégicos</button>
@@ -503,6 +504,33 @@
           governança e impacto social.
         </p>
         <a class="botao" href="resolucao232.html">Consultar resolução</a>
+      </div>
+    </section>
+
+    <section id="aprendizagem" class="section grupo-pesquisavel">
+      <h2>🎓 Aprendizagem Profissional</h2>
+      <div class="cards">
+        <article class="card azul item-pesquisavel" data-categoria="aprendizagem" data-status="disponivel">
+          <a class="card-link" href="lei10097.html">
+            <h3>📘 Marco Legal da Aprendizagem</h3>
+            <p>
+              Consulte a Lei nº 10.097/2000, as regras do contrato de aprendizagem,
+              a cota, a jornada e os direitos do aprendiz.
+            </p>
+            <span class="badge">Disponível</span>
+          </a>
+        </article>
+
+        <article class="card laranja item-pesquisavel" data-categoria="aprendizagem" data-status="disponivel">
+          <a class="card-link" href="linha_do_tempo_aprendizagem.html">
+            <h3>🗓️ Linha do Tempo da Aprendizagem</h3>
+            <p>
+              Acompanhe os principais marcos legais e infralegais, da Lei nº 10.097/2000
+              à Portaria MTE nº 3.872/2023, com orientações práticas e pontos técnicos.
+            </p>
+            <span class="badge">Disponível</span>
+          </a>
+        </article>
       </div>
     </section>
 
@@ -547,16 +575,6 @@
           <p>Conteúdo sobre regulamentação da Aprendizagem Profissional.</p>
           <span class="badge construcao">Em construção</span>
         </article>
-      </div>
-    </section>
-
-    <section id="atencao" class="section">
-      <h2>🧡 Pontos de atenção</h2>
-      <div class="alertas">
-        <div class="alerta"><strong>Contratação:</strong> verificar idade, jornada, escolaridade e documentação.</div>
-        <div class="alerta"><strong>Frequência escolar:</strong> acompanhar impactos no contrato de aprendizagem.</div>
-        <div class="alerta"><strong>Rescisão:</strong> consultar hipóteses legais antes de qualquer orientação.</div>
-        <div class="alerta"><strong>Aprendiz PCD:</strong> observar as regras específicas aplicáveis.</div>
       </div>
     </section>
 
@@ -643,8 +661,11 @@
       <h2>📊 Consulta rápida</h2>
       <div class="cards">
         <article class="card azul item-pesquisavel" data-categoria="consulta" data-status="disponivel">
-          <h3>Aprendizagem profissional</h3>
-          <p>Atalhos, conceitos e orientações sobre aprendizagem.</p>
+          <a class="card-link" href="#aprendizagem">
+            <h3>Aprendizagem profissional</h3>
+            <p>Atalhos, conceitos e orientações sobre aprendizagem.</p>
+            <span class="badge">Acessar seção</span>
+          </a>
         </article>
 
         <article class="card rosa item-pesquisavel" data-categoria="consulta" data-status="disponivel">
