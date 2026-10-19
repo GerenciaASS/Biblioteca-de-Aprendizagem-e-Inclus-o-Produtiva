@@ -1,1 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Linha do tempo dos principais marcos normativos da Aprendizagem Profissional no Brasil até a Portaria MTE nº 3.872/2023.">
+  <title>Linha do Tempo da Aprendizagem Profissional</title>
+  <style>
+    :root{--azul:#1f4e79;--azul-escuro:#153753;--laranja:#d96f08;--rosa:#b93472;--verde:#176b3a;--cinza:#f5f7fa;--texto:#263746;--branco:#fff;--borda:#d9e1e8;--sombra:0 4px 14px rgba(0,0,0,.09);--raio:16px}
+    *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:88px}body{font-family:"Segoe UI",Arial,sans-serif;background:var(--cinza);color:var(--texto);line-height:1.65}
+    a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #ffbf47;outline-offset:3px}.skip{position:absolute;left:-9999px;top:8px;background:#fff;color:var(--azul);padding:10px 14px;border-radius:8px;z-index:999;font-weight:700}.skip:focus{left:12px}
+    .hero{background:linear-gradient(135deg,var(--azul),var(--rosa),var(--laranja));padding:52px 24px;color:#fff;text-align:center}.hero .etiqueta{display:inline-block;padding:7px 14px;border:1px solid rgba(255,255,255,.65);background:rgba(255,255,255,.16);border-radius:999px;font-weight:800;margin-bottom:14px}.hero h1{font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin-bottom:13px}.hero p{max-width:900px;margin:auto;font-size:1.08rem}
+    .menu{position:sticky;top:0;z-index:50;background:var(--azul-escuro);box-shadow:0 3px 10px rgba(0,0,0,.2)}.menu ul{max-width:1180px;margin:auto;padding:9px 18px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;list-style:none}.menu a{display:block;color:#fff;text-decoration:none;padding:8px 11px;border-radius:8px;font-weight:650;font-size:.94rem}.menu a:hover{background:rgba(255,255,255,.14)}
+    main{max-width:1180px;margin:auto;padding:32px 24px}.voltar{display:inline-block;margin-bottom:22px;color:var(--azul);font-weight:750;text-decoration:none}.voltar:hover{text-decoration:underline}.aviso{background:#fff8df;border-left:6px solid var(--laranja);padding:18px 20px;border-radius:10px;margin-bottom:28px}.aviso strong{color:#704100}
+    section{margin-bottom:50px}section>h2{color:var(--azul);font-size:clamp(1.5rem,3vw,2rem);margin-bottom:18px}.introducao{background:#fff;padding:28px;border-radius:var(--raio);box-shadow:var(--sombra);border-top:7px solid var(--rosa)}.introducao h2{color:var(--azul);margin-bottom:10px}.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}.tag{background:#e8f0f7;color:var(--azul-escuro);padding:6px 11px;border-radius:999px;font-size:.88rem;font-weight:700}
+    .resumo{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}.numero{background:#fff;padding:21px;border-radius:14px;box-shadow:var(--sombra);text-align:center}.numero strong{display:block;font-size:1.8rem;color:var(--azul);line-height:1.15}.numero span{font-size:.94rem;color:#526778}
+    .timeline{position:relative;margin-top:24px}.timeline::before{content:"";position:absolute;left:29px;top:0;bottom:0;width:4px;background:linear-gradient(var(--azul),var(--rosa),var(--laranja));border-radius:10px}.evento{position:relative;margin-left:72px;margin-bottom:25px;background:#fff;padding:24px;border-radius:var(--raio);box-shadow:var(--sombra);border:1px solid #e6ebef}.evento::before{content:"";position:absolute;left:-54px;top:26px;width:22px;height:22px;border-radius:50%;background:var(--azul);border:5px solid var(--cinza);box-shadow:0 0 0 3px var(--azul)}.evento.portaria::before{background:var(--rosa);box-shadow:0 0 0 3px var(--rosa)}.evento.decreto::before{background:var(--laranja);box-shadow:0 0 0 3px var(--laranja)}.evento.destaque{border:2px solid var(--rosa);background:linear-gradient(135deg,#fff,#fff6fa)}
+    .cabecalho-evento{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:9px}.ano{font-size:1.65rem;font-weight:850;color:var(--azul);line-height:1}.tipo{padding:4px 9px;border-radius:999px;background:#e7eff7;color:var(--azul-escuro);font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.03em}.evento h3{color:var(--azul-escuro);font-size:1.22rem;margin-bottom:8px}.evento ul{padding-left:21px;margin-top:9px}.evento li+li{margin-top:5px}.impacto{margin-top:14px;padding:13px 15px;background:#f4f7fa;border-left:5px solid var(--azul);border-radius:8px}.impacto strong{color:var(--azul)}.fonte-link{display:inline-block;margin-top:13px;color:var(--azul);font-weight:750;text-decoration:none}.fonte-link:hover{text-decoration:underline}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px}.card{background:#fff;padding:23px;border-radius:var(--raio);box-shadow:var(--sombra);border-top:6px solid var(--azul)}.card.rosa{border-color:var(--rosa)}.card.laranja{border-color:var(--laranja)}.card h3{color:var(--azul-escuro);margin-bottom:8px}.card ul{padding-left:20px}
+    .mudancas{overflow-x:auto;background:#fff;border-radius:var(--raio);box-shadow:var(--sombra)}table{width:100%;border-collapse:collapse;min-width:760px}th,td{text-align:left;vertical-align:top;padding:15px;border-bottom:1px solid var(--borda)}th{background:var(--azul-escuro);color:#fff}tr:last-child td{border-bottom:0}.status{display:inline-block;padding:4px 8px;border-radius:999px;font-size:.8rem;font-weight:800}.revogada{background:#fae4e4;color:#8a2525}.historica{background:#fff1d5;color:#754800}.central{background:#dff1e5;color:#155c32}
+    .fontes{background:#fff;padding:24px;border-radius:var(--raio);box-shadow:var(--sombra)}.fontes ul{padding-left:22px}.fontes li+li{margin-top:10px}.fontes a{color:var(--azul);font-weight:700;overflow-wrap:anywhere}.nota{margin-top:17px;color:#536879;font-size:.92rem}
+    footer{background:#1c2630;color:#fff;text-align:center;padding:32px 20px;margin-top:52px}footer small{display:block;color:#d5dee6;margin-top:12px}
+    @media(max-width:700px){.hero{padding:40px 18px}.menu{position:static}.menu ul{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto}.menu a{white-space:nowrap}main{padding:25px 16px}.introducao,.evento,.card{padding:20px}.timeline::before{left:13px}.evento{margin-left:43px}.evento::before{left:-39px;width:18px;height:18px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo principal</a>
+  <header class="hero">
+    <span class="etiqueta">2000 a 2023</span>
+    <h1>Linha do Tempo da Aprendizagem Profissional</h1>
+    <p>Principais marcos legais e infralegais que estruturaram a contratação, a formação, o cadastro, a fiscalização e os programas de aprendizagem profissional no Brasil.</p>
+  </header>
+  <nav class="menu" aria-label="Navegação desta página"><ul>
+    <li><a href="#visao-geral">Visão geral</a></li><li><a href="#linha-do-tempo">Linha do tempo</a></li><li><a href="#mudancas">Comparação</a></li><li><a href="#3872">Portaria 3.872</a></li><li><a href="#atencao">Pontos de atenção</a></li><li><a href="#fontes">Fontes</a></li>
+  </ul></nav>
+  <main id="conteudo">
+    <a class="voltar" href="index.html">← Voltar à Biblioteca</a>
+    <aside class="aviso"><strong>Precisão jurídica:</strong> portarias não alteram diretamente a Lei nº 10.097/2000. Elas regulamentam e operacionalizam a aprendizagem profissional no âmbito das competências administrativas. A linha do tempo também inclui leis e decretos indispensáveis para compreender a evolução normativa.</aside>
+
+    <section id="visao-geral" class="introducao">
+      <h2>Como ler esta linha do tempo</h2>
+      <p>A Lei nº 10.097/2000 modificou a CLT e renovou o marco legal da aprendizagem. Depois dela, decretos regulamentaram o contrato e a cota, enquanto portarias detalharam cadastro de entidades, programas, parâmetros pedagógicos, modalidades de oferta e sistemas como CNAP e CONAP.</p>
+      <div class="tags"><span class="tag">Contrato especial</span><span class="tag">Cota de aprendizagem</span><span class="tag">Formação metódica</span><span class="tag">CNAP</span><span class="tag">CONAP</span><span class="tag">CBO e QBQ</span></div>
+    </section>
+
+    <section aria-label="Resumo quantitativo"><div class="resumo">
+      <div class="numero"><strong>2000</strong><span>renovação do marco legal</span></div><div class="numero"><strong>2005</strong><span>primeira regulamentação sistêmica</span></div><div class="numero"><strong>2012</strong><span>estruturação do CNAP e CONAP</span></div><div class="numero"><strong>2023</strong><span>novo marco infralegal</span></div>
+    </div></section>
+
+    <section id="linha-do-tempo">
+      <h2>🗓️ Evolução normativa</h2>
+      <div class="timeline">
+        <article class="evento">
+          <div class="cabecalho-evento"><span class="ano">2000</span><span class="tipo">Lei</span></div>
+          <h3>Lei nº 10.097, de 19 de dezembro de 2000</h3>
+          <p>Alterou dispositivos da CLT e consolidou elementos centrais da aprendizagem profissional contemporânea.</p>
+          <ul><li>Contrato especial de trabalho, ajustado por escrito e por prazo determinado.</li><li>Formação técnico-profissional metódica compatível com o desenvolvimento do aprendiz.</li><li>Obrigação de contratação em percentual de 5% a 15% das funções que demandem formação profissional.</li><li>Regras de idade, jornada, frequência escolar e entidades qualificadas.</li></ul>
+          <div class="impacto"><strong>Impacto:</strong> estabeleceu a base legal sobre a qual os decretos e as portarias posteriores passaram a operar.</div>
+          <a class="fonte-link" href="https://www.planalto.gov.br/ccivil_03/leis/l10097.htm" target="_blank" rel="noopener noreferrer">Consultar a Lei nº 10.097/2000 ↗</a>
+        </article>
+
+        <article class="evento decreto">
+          <div class="cabecalho-evento"><span class="ano">2005</span><span class="tipo">Decreto</span></div>
+          <h3>Decreto nº 5.598, de 1º de dezembro de 2005</h3>
+          <p>Regulamentou a contratação de aprendizes e sistematizou a aplicação da lei.</p>
+          <ul><li>Detalhamento do contrato de aprendizagem, jornada e atividades teóricas e práticas.</li><li>Regras para cálculo e cumprimento da cota.</li><li>Definição das entidades qualificadas em formação técnico-profissional metódica.</li><li>Parâmetros de acompanhamento e fiscalização.</li></ul>
+          <div class="impacto"><strong>Impacto:</strong> transformou as disposições da CLT em regras operacionais para empresas, entidades formadoras e fiscalização.</div>
+          <a class="fonte-link" href="https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/decreto/d5598.htm" target="_blank" rel="noopener noreferrer">Consultar o Decreto nº 5.598/2005 ↗</a>
+        </article>
+
+        <article class="evento portaria">
+          <div class="cabecalho-evento"><span class="ano">2007</span><span class="tipo">Portaria</span></div>
+          <h3>Portaria MTE nº 615, de 13 de dezembro de 2007</h3>
+          <p>Disciplinou o Cadastro Nacional de Aprendizagem e a avaliação de entidades e programas.</p>
+          <ul><li>Cadastro e acompanhamento das entidades qualificadas.</li><li>Informações sobre programas, turmas e aprendizes.</li><li>Parâmetros para validação, monitoramento e qualidade da formação.</li></ul>
+          <div class="impacto"><strong>Impacto:</strong> iniciou uma organização nacional mais estruturada da oferta formativa.</div>
+          <a class="fonte-link" href="https://portalfat.trabalho.gov.br/programas-e-acoes-2/caged-3/legislacao/2007-2/" target="_blank" rel="noopener noreferrer">Consultar o acervo oficial de 2007 ↗</a>
+        </article>
+
+        <article class="evento portaria">
+          <div class="cabecalho-evento"><span class="ano">2012</span><span class="tipo">Portaria</span></div>
+          <h3>Portaria MTE nº 723, de 23 de abril de 2012</h3>
+          <p>Reorganizou o Cadastro Nacional de Aprendizagem Profissional e os parâmetros de oferta dos programas.</p>
+          <ul><li>Criação e aperfeiçoamento do CNAP.</li><li>Orientação e padronização dos programas em consonância com a CBO.</li><li>Estruturação do Catálogo Nacional de Programas de Aprendizagem Profissional.</li><li>Monitoramento com ênfase na qualidade pedagógica e na efetividade social.</li></ul>
+          <div class="impacto"><strong>Impacto:</strong> tornou-se referência central para entidades formadoras durante grande parte da década seguinte.</div>
+          <a class="fonte-link" href="https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/aprendizagem-profissional/arquivos-aprendizagem-profissional/portaria-mte-723-2012-com-alteracoes.pdf" target="_blank" rel="noopener noreferrer">Consultar a Portaria nº 723/2012 compilada ↗</a>
+        </article>
+
+        <article class="evento portaria">
+          <div class="cabecalho-evento"><span class="ano">2013</span><span class="tipo">Portaria alteradora</span></div>
+          <h3>Portaria MTE nº 1.005, de 1º de julho de 2013</h3>
+          <p>Alterou dispositivos da Portaria nº 723/2012 e ajustou regras aplicáveis aos programas de aprendizagem.</p>
+          <ul><li>Aperfeiçoamentos nos parâmetros de cadastramento e oferta.</li><li>Ajustes relacionados à organização dos programas e às cargas horárias.</li><li>Atualização de procedimentos para entidades qualificadas.</li></ul>
+          <div class="impacto"><strong>Impacto:</strong> consolidou ajustes operacionais no modelo instituído em 2012.</div>
+          <a class="fonte-link" href="https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/aprendizagem-profissional/arquivos-aprendizagem-profissional/portaria-mte-723-2012-com-alteracoes.pdf" target="_blank" rel="noopener noreferrer">Ver alterações no texto compilado da Portaria nº 723 ↗</a>
+        </article>
+
+        <article class="evento decreto">
+          <div class="cabecalho-evento"><span class="ano">2016</span><span class="tipo">Decreto</span></div>
+          <h3>Decreto nº 8.740, de 4 de maio de 2016</h3>
+          <p>Alterou o Decreto nº 5.598/2005 para permitir formas alternativas de cumprimento da cota em situações regulamentadas.</p>
+          <ul><li>Previsão de experiência prática em entidade concedente.</li><li>Resposta às dificuldades de realização da prática em determinados ambientes ou atividades.</li></ul>
+          <div class="impacto"><strong>Impacto:</strong> abriu caminho para regulamentação específica do cumprimento alternativo da cota.</div>
+          <a class="fonte-link" href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/d8740.htm" target="_blank" rel="noopener noreferrer">Consultar o Decreto nº 8.740/2016 ↗</a>
+        </article>
+
+        <article class="evento portaria">
+          <div class="cabecalho-evento"><span class="ano">2017</span><span class="tipo">Portaria</span></div>
+          <h3>Portaria MTE nº 693, de 23 de maio de 2017</h3>
+          <p>Regulamentou o cumprimento alternativo da cota de aprendizagem por meio de entidade concedente da experiência prática.</p>
+          <ul><li>Aplicação a setores e atividades com peculiaridades ou restrições para a prática direta.</li><li>Definição de procedimentos e responsabilidades entre estabelecimento, entidade formadora e concedente.</li><li>Manutenção do caráter formativo e protegido da aprendizagem.</li></ul>
+          <div class="impacto"><strong>Impacto:</strong> ampliou alternativas de inclusão sem afastar a obrigação de cumprimento da cota.</div>
+        </article>
+
+        <article class="evento portaria">
+          <div class="cabecalho-evento"><span class="ano">2018</span><span class="tipo">Portaria alteradora</span></div>
+          <h3>Portaria MTb nº 634, de 9 de agosto de 2018</h3>
+          <p>Alterou a Portaria nº 723/2012, atualizando regras do CNAP e da avaliação de entidades e programas.</p>
+          <ul><li>Ajustes nas obrigações de inscrição e fornecimento de informações.</li><li>Regras diferenciadas conforme a natureza das entidades previstas no art. 430 da CLT.</li><li>Atualização dos procedimentos de avaliação de competência.</li></ul>
+          <div class="impacto"><strong>Impacto:</strong> refinou o regime de habilitação e acompanhamento das entidades formadoras.</div>
+          <a class="fonte-link" href="https://www.in.gov.br/materia/-/asset_publisher/Kujrw0TZC2Mb/content/id/36330392/Imprns_Nacional" target="_blank" rel="noopener noreferrer">Consultar a Portaria nº 634/2018 ↗</a>
+        </article>
+
+        <article class="evento decreto">
+          <div class="cabecalho-evento"><span class="ano">2018</span><span class="tipo">Decreto consolidante</span></div>
+          <h3>Decreto nº 9.579, de 22 de novembro de 2018</h3>
+          <p>Consolidou atos normativos relativos à infância, adolescência e aprendizagem profissional, revogando o Decreto nº 5.598/2005.</p>
+          <ul><li>Reunião das regras regulamentares da aprendizagem em um novo texto.</li><li>Preservação de conceitos sobre contrato, cota, formação e fiscalização.</li><li>Nova referência regulamentar para as portarias posteriores.</li></ul>
+          <div class="impacto"><strong>Impacto:</strong> passou a ser o decreto central de regulamentação da aprendizagem profissional.</div>
+          <a class="fonte-link" href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/decreto/d9579.htm" target="_blank" rel="noopener noreferrer">Consultar o Decreto nº 9.579/2018 ↗</a>
+        </article>
+
+        <article class="evento portaria">
+          <div class="cabecalho-evento"><span class="ano">2021</span><span class="tipo">Portaria consolidante</span></div>
+          <h3>Portaria MTP nº 671, de 8 de novembro de 2021</h3>
+          <p>Consolidou disposições trabalhistas e incorporou regras sobre aprendizagem profissional em capítulo próprio.</p>
+          <ul><li>Reunião de normas antes dispersas.</li><li>Disciplina de entidades formadoras, CNAP, programas e modalidades de oferta.</li><li>Tratamento de cursos presenciais, a distância e híbridos conforme requisitos normativos.</li><li>Atualização de procedimentos administrativos e cadastrais.</li></ul>
+          <div class="impacto"><strong>Impacto:</strong> substituiu parte importante do regime infralegal anterior e tornou-se a principal portaria consolidada trabalhista.</div>
+          <a class="fonte-link" href="https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/legislacao/portarias-1/portarias-vigentes-3/WORDPortarian671de8denovembrode2021compilada21.07.2026.pdf" target="_blank" rel="noopener noreferrer">Consultar a Portaria nº 671/2021 compilada ↗</a>
+        </article>
+
+        <article class="evento portaria">
+          <div class="cabecalho-evento"><span class="ano">2023</span><span class="tipo">Portarias de transição</span></div>
+          <h3>Portarias MTE nº 2.420, nº 3.472 e nº 3.544/2023</h3>
+          <p>Alteraram pontos da Portaria nº 671/2021 durante o processo de revisão normativa da aprendizagem.</p>
+          <ul><li>Ajustes temporários e preparação do novo marco regulatório.</li><li>A Portaria nº 3.544/2023 foi revogada pela Portaria nº 3.872/2023.</li><li>A sequência demonstra a transição para regras específicas fora do bloco anterior da Portaria nº 671.</li></ul>
+          <div class="impacto"><strong>Impacto:</strong> período de transição normativa que culminou na Portaria nº 3.872/2023.</div>
+          <a class="fonte-link" href="https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/legislacao/portarias-1/portarias-vigentes-3/WORDPortarian671de8denovembrode2021compilada21.07.2026.pdf" target="_blank" rel="noopener noreferrer">Consultar o histórico de alterações da Portaria nº 671 ↗</a>
+        </article>
+
+        <article id="3872" class="evento portaria destaque">
+          <div class="cabecalho-evento"><span class="ano">2023</span><span class="tipo">Novo marco infralegal</span></div>
+          <h3>Portaria MTE nº 3.872, de 21 de dezembro de 2023</h3>
+          <p>Passou a dispor especificamente sobre aprendizagem profissional, Cadastro Nacional de Aprendizagem Profissional e Catálogo Nacional da Aprendizagem Profissional.</p>
+          <ul><li>Define o CNAP como banco nacional de entidades, cursos e aprendizes.</li><li>Define o CONAP como referência para elaboração e oferta dos cursos.</li><li>Integra CBO, Quadro Brasileiro de Qualificações e competências profissionais.</li><li>Prevê programas do tipo ocupação, arco ocupacional e múltiplas ocupações.</li><li>Disciplina habilitação de entidades, autorização de cursos, cadastro de aprendizes e monitoramento.</li><li>Organiza requisitos pedagógicos, atividades teóricas e práticas e modalidades de oferta.</li></ul>
+          <div class="impacto"><strong>Impacto:</strong> tornou-se o principal ato infralegal específico da aprendizagem profissional, reorganizando conceitos, instrumentos e procedimentos nacionais.</div>
+          <a class="fonte-link" href="https://www.in.gov.br/web/dou/-/portaria-mte-n-3.872-de-21-de-dezembro-de-2023-532733497" target="_blank" rel="noopener noreferrer">Consultar a Portaria nº 3.872/2023 no DOU ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="mudancas">
+      <h2>📊 O que mudou ao longo do tempo?</h2>
+      <div class="mudancas"><table>
+        <thead><tr><th>Período</th><th>Foco predominante</th><th>Resultado institucional</th><th>Situação histórica</th></tr></thead>
+        <tbody>
+          <tr><td>2000–2005</td><td>Contrato, cota e regulamentação geral</td><td>Base legal e operacional para contratação e fiscalização</td><td><span class="status historica">Fundação</span></td></tr>
+          <tr><td>2007–2013</td><td>Cadastro, avaliação e qualidade pedagógica</td><td>Fortalecimento do CNAP, do CONAP e da padronização dos programas</td><td><span class="status historica">Estruturação</span></td></tr>
+          <tr><td>2016–2018</td><td>Alternativas de prática e atualização das entidades</td><td>Novas formas de cumprimento e consolidação regulamentar</td><td><span class="status historica">Expansão</span></td></tr>
+          <tr><td>2021</td><td>Consolidação das normas trabalhistas</td><td>Reunião de regras na Portaria MTP nº 671</td><td><span class="status revogada">Parcialmente superada</span></td></tr>
+          <tr><td>2023</td><td>Marco específico, competências e novos programas</td><td>Reorganização nacional por CNAP, CONAP, CBO e QBQ</td><td><span class="status central">Referência central</span></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section id="atencao">
+      <h2>⚠️ Pontos de atenção para uso técnico</h2>
+      <div class="cards">
+        <article class="card rosa"><h3>Hierarquia das normas</h3><p>A Constituição, a CLT e as leis prevalecem sobre decretos e portarias. Uma portaria organiza procedimentos administrativos, mas não pode contrariar norma superior.</p></article>
+        <article class="card"><h3>Texto vigente</h3><p>Para orientar empresas, aprendizes ou entidades, confirme o texto compilado e eventuais alterações posteriores. Documentos históricos são úteis para compreender a evolução, não necessariamente para aplicar a regra atual.</p></article>
+        <article class="card laranja"><h3>Cota e base de cálculo</h3><p>A identificação de funções que demandam formação profissional exige análise da CBO, das exclusões legais e da realidade do estabelecimento.</p></article>
+        <article class="card rosa"><h3>Adolescentes</h3><p>A contratação e a atividade prática devem observar proteção integral, prioridade de adolescentes, escolaridade e proibição de trabalhos perigosos, insalubres, noturnos ou incompatíveis.</p></article>
+        <article class="card"><h3>Entidade formadora</h3><p>Habilitação, curso autorizado, equipe, estrutura e registros no CNAP precisam ser verificados antes e durante a execução do programa.</p></article>
+        <article class="card laranja"><h3>Integração teoria-prática</h3><p>O contrato deve manter vínculo real entre formação teórica, prática profissional, ocupação e desenvolvimento do aprendiz.</p></article>
+      </div>
+    </section>
+
+    <section id="fontes" class="fontes">
+      <h2>🔎 Fontes oficiais</h2>
+      <ul>
+        <li><a href="https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/aprendizagem-profissional" target="_blank" rel="noopener noreferrer">Página de Aprendizagem Profissional do Ministério do Trabalho e Emprego</a></li>
+        <li><a href="https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/inspecao-do-trabalho/escola/e-biblioteca/manual-de-aprendizagem-profissional.pdf" target="_blank" rel="noopener noreferrer">Manual da Aprendizagem Profissional, edição revista e ampliada</a></li>
+        <li><a href="https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/aprendizagem-profissional/arquivos-aprendizagem-profissional/portaria-mte-723-2012-com-alteracoes.pdf" target="_blank" rel="noopener noreferrer">Portaria MTE nº 723/2012 com alterações</a></li>
+        <li><a href="https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/legislacao/portarias-1/portarias-vigentes-3/WORDPortarian671de8denovembrode2021compilada21.07.2026.pdf" target="_blank" rel="noopener noreferrer">Portaria MTP nº 671/2021 compilada</a></li>
+        <li><a href="https://www.in.gov.br/web/dou/-/portaria-mte-n-3.872-de-21-de-dezembro-de-2023-532733497" target="_blank" rel="noopener noreferrer">Portaria MTE nº 3.872/2023 no Diário Oficial da União</a></li>
+      </ul>
+      <p class="nota">Página de apoio à consulta. Para aplicação em caso concreto, utilize sempre o texto oficial atualizado e, quando necessário, orientação jurídica ou da Inspeção do Trabalho.</p>
+    </section>
+  </main>
+  <footer><p><strong>Biblioteca da Aprendizagem e Inclusão Produtiva</strong></p><p>Linha do tempo dos principais marcos normativos da Aprendizagem Profissional</p><small>Conteúdo organizado em 19/10/2026. Consulte sempre a legislação vigente.</small></footer>
+</body>
+</html>
 
