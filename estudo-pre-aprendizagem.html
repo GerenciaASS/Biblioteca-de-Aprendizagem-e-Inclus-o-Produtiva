@@ -1,154 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Estudo sobre Pré-Aprendizagem</title>
+<title>Pré-Aprendizagem</title>
 
 <style>
 
 :root{
-    --azul:#0057B8;
-    --azul-claro:#009FE3;
-    --verde:#2E8B57;
-    --laranja:#F28C28;
-    --cinza:#f4f6f9;
-    --texto:#2d3748;
+--azul:#0057B8;
+--azul-claro:#009FE3;
+--verde:#2E8B57;
+--laranja:#F28C28;
+--cinza:#f4f6f9;
+--texto:#2d3748;
 }
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
-    background:var(--cinza);
-    color:var(--texto);
-    line-height:1.7;
+background:var(--cinza);
+color:var(--texto);
+line-height:1.7;
 }
 
 .hero{
-    background:linear-gradient(135deg,#003C8F,#009FE3);
-    color:white;
-    text-align:center;
-    padding:90px 20px;
+background:linear-gradient(135deg,#0057B8,#009FE3);
+color:white;
+text-align:center;
+padding:90px 20px;
 }
 
 .hero h1{
-    font-size:3rem;
-    margin-bottom:20px;
+font-size:3rem;
+margin-bottom:20px;
 }
 
 .hero p{
-    max-width:900px;
-    margin:auto;
-    font-size:1.1rem;
+max-width:900px;
+margin:auto;
+font-size:1.15rem;
 }
 
 .container{
-    max-width:1200px;
-    margin:auto;
-    padding:50px 20px;
+max-width:1200px;
+margin:auto;
+padding:50px 20px;
 }
 
 .section{
-    background:white;
-    margin-bottom:30px;
-    padding:40px;
-    border-radius:16px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+background:white;
+padding:40px;
+border-radius:16px;
+margin-bottom:30px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
 .section h2{
-    color:var(--azul);
-    margin-bottom:20px;
+color:#0057B8;
+margin-bottom:20px;
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:20px;
 }
 
 .card{
-    background:#f8fafc;
-    border-left:5px solid var(--azul);
-    padding:20px;
-    border-radius:10px;
+background:#f8fafc;
+padding:25px;
+border-left:5px solid #0057B8;
+border-radius:10px;
 }
 
 .card h3{
-    margin-bottom:10px;
-    color:var(--azul);
+color:#0057B8;
+margin-bottom:10px;
 }
 
-.kpis{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+.trilha{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+gap:15px;
+font-weight:bold;
+font-size:1.1rem;
+text-align:center;
+margin-top:20px;
 }
 
-.kpi{
-    background:white;
-    text-align:center;
-    padding:25px;
-    border-radius:16px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+.etapa{
+background:#E8F4FF;
+padding:15px 20px;
+border-radius:10px;
 }
 
-.kpi h2{
-    font-size:3rem;
-    color:var(--verde);
-}
-
-.timeline{
-    border-left:4px solid var(--azul);
-    padding-left:20px;
-}
-
-.timeline-item{
-    margin-bottom:25px;
-}
-
-.timeline-item h3{
-    color:var(--azul);
-}
-
-.highlight{
-    background:#E8F4FF;
-    border-left:6px solid var(--azul);
-    padding:20px;
-    border-radius:8px;
-    margin-top:20px;
+.seta{
+font-size:1.5rem;
+color:#0057B8;
 }
 
 .botao{
-    display:inline-block;
-    background:var(--azul);
-    color:white;
-    text-decoration:none;
-    padding:12px 20px;
-    border-radius:8px;
-    margin-top:15px;
+display:inline-block;
+padding:12px 20px;
+background:#0057B8;
+color:white;
+text-decoration:none;
+border-radius:8px;
+margin-top:15px;
 }
 
 ul{
-    margin-left:20px;
+margin-left:20px;
 }
 
 li{
-    margin-bottom:10px;
+margin-bottom:10px;
 }
 
 footer{
-    background:white;
-    text-align:center;
-    padding:30px;
-    margin-top:50px;
+background:white;
+padding:30px;
+text-align:center;
+margin-top:40px;
 }
 
 </style>
@@ -159,12 +144,15 @@ footer{
 
 <header class="hero">
 
-<h1>📊 Estudo Prospectivo sobre Pré-Aprendizagem</h1>
+<h1>🌱 Pré-Aprendizagem</h1>
 
 <p>
-Levantamento realizado para compreender como as entidades formadoras
-entendem a Pré-Aprendizagem e subsidiar o planejamento estratégico e
-o aperfeiçoamento da política pública de Aprendizagem Profissional.
+
+A Pré-Aprendizagem é uma estratégia de desenvolvimento voltada a adolescentes e jovens,
+especialmente aqueles em situação de vulnerabilidade social, fortalecendo capacidades,
+projetos de vida e oportunidades de inclusão produtiva antes do ingresso em programas
+de Aprendizagem Profissional, Estágio ou trabalho protegido.
+
 </p>
 
 </header>
@@ -173,83 +161,58 @@ o aperfeiçoamento da política pública de Aprendizagem Profissional.
 
 <section class="section">
 
-<h2>📌 Objetivo do Estudo</h2>
+<h2>O que é Pré-Aprendizagem?</h2>
 
 <p>
-A pesquisa buscou compreender o entendimento das entidades formadoras sobre
-a Pré-Aprendizagem, identificar formatos de implementação, cargas horárias,
-métodos pedagógicos e desafios encontrados na oferta dos programas.
+
+A Pré-Aprendizagem pode ser compreendida como uma etapa formativa anterior à Aprendizagem
+Profissional, destinada a preparar adolescentes e jovens para sua inserção social,
+educacional e profissional.
+
 </p>
-
-<div class="highlight">
-O estudo surgiu diante da necessidade de aprofundar o conceito de Pré-Aprendizagem,
-uma vez que diversas entidades já realizavam ações semelhantes, mas sem uma
-padronização normativa nacional consolidada.
-</div>
-
-</section>
-
-<section>
-
-<div class="kpis">
-
-<div class="kpi">
-<h2>242</h2>
-<p>Respostas na pesquisa inicial</p>
-</div>
-
-<div class="kpi">
-<h2>54</h2>
-<p>Respostas complementares</p>
-</div>
-
-<div class="kpi">
-<h2>146</h2>
-<p>Casos válidos para análise estatística</p>
-</div>
-
-<div class="kpi">
-<h2>72h</h2>
-<p>Mediana da carga horária</p>
-</div>
-
-</div>
-
-</section>
 
 <br>
 
+<p>
+
+Seu propósito é fortalecer competências educacionais, sociais, emocionais e cognitivas,
+contribuindo para uma transição mais segura entre a escola, a comunidade e o mundo do trabalho.
+
+</p>
+
+</section>
+
 <section class="section">
 
-<h2>🧪 Metodologia</h2>
+<h2>Por que a Pré-Aprendizagem é importante?</h2>
 
-<div class="timeline">
+<div class="grid">
 
-<div class="timeline-item">
-<h3>1ª Etapa</h3>
+<div class="card">
+<h3>🤝 Proteção Social</h3>
 <p>
-Aplicação de questionário nacional entre fevereiro e maio de 2026.
+Contribui para a prevenção de situações de vulnerabilidade e para o fortalecimento dos vínculos familiares e comunitários.
 </p>
 </div>
 
-<div class="timeline-item">
-<h3>2ª Etapa</h3>
+<div class="card">
+<h3>📚 Desenvolvimento de Capacidades</h3>
 <p>
-Nova coleta específica para entidades que já executavam ações de Pré-Aprendizagem.
+Promove competências educacionais, socioemocionais e digitais necessárias para a vida adulta e profissional.
 </p>
 </div>
 
-<div class="timeline-item">
-<h3>Tratamento Quantitativo</h3>
+<div class="card">
+<h3>🌎 Participação Social</h3>
 <p>
-Utilização da linguagem R para cálculo de tendências, frequências e distribuição das cargas horárias.
+Estimula cidadania, protagonismo juvenil, participação comunitária e acesso a direitos.
 </p>
 </div>
 
-<div class="timeline-item">
-<h3>Tratamento Qualitativo</h3>
+<div class="card">
+<h3>🚀 Inclusão Produtiva</h3>
 <p>
-Utilização do IRaMuTeQ para análise lexical, classificação temática e relações conceituais.
+Amplia o acesso a oportunidades de qualificação, aprendizagem profissional, estágio e emprego.
 </p>
 </div>
 
@@ -259,131 +222,21 @@ Utilização do IRaMuTeQ para análise lexical, classificação temática e rela
 
 <section class="section">
 
-<h2>📚 O que as entidades entendem por Pré-Aprendizagem?</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Preparação</h3>
-<p>
-Curso preparatório e anterior à Aprendizagem Profissional.
-</p>
-</div>
-
-<div class="card">
-<h3>Formação</h3>
-<p>
-Etapa de desenvolvimento de competências básicas e profissionais.
-</p>
-</div>
-
-<div class="card">
-<h3>Inclusão</h3>
-<p>
-Estratégia direcionada prioritariamente a jovens em situação de vulnerabilidade social.
-</p>
-</div>
-
-<div class="card">
-<h3>Transição</h3>
-<p>
-Ponte entre a escola, os projetos sociais e o mundo do trabalho.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>📈 Principais Resultados Quantitativos</h2>
-
-<ul>
-<li>A mediana encontrada foi de 72 horas.</li>
-
-<li>As faixas mais frequentes foram entre 10 e 20 horas e entre 70 e 80 horas.</li>
-
-<li>Não foi identificado um único modelo nacional de implementação.</li>
-
-<li>Existem formatos mais curtos e outros mais extensos, ambos considerados Pré-Aprendizagem pelas entidades.</li>
-
-<li>As cargas horárias superiores aos limites identificados indicam possíveis confusões conceituais entre Pré-Aprendizagem e ações realizadas durante a própria Aprendizagem Profissional.</li>
-</ul>
-
-</section>
-
-<section class="section">
-
-<h2>🧩 As 6 dimensões identificadas</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>1</h3>
-<p><strong>Competências básicas e educacionais</strong></p>
-</div>
-
-<div class="card">
-<h3>2</h3>
-<p><strong>Organização administrativa</strong></p>
-</div>
-
-<div class="card">
-<h3>3</h3>
-<p><strong>Inserção profissional</strong></p>
-</div>
-
-<div class="card">
-<h3>4</h3>
-<p><strong>Recorte social e vulnerabilidade</strong></p>
-</div>
-
-<div class="card">
-<h3>5</h3>
-<p><strong>Avaliação e acompanhamento</strong></p>
-</div>
-
-<div class="card">
-<h3>6</h3>
-<p><strong>Definição conceitual da Pré-Aprendizagem</strong></p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>⚠️ Barreiras Identificadas</h2>
-
-<ul>
-<li>Limitações financeiras.</li>
-<li>Estrutura física insuficiente.</li>
-<li>Dificuldade de composição de turmas.</li>
-<li>Ausência de regulamentação mais detalhada.</li>
-<li>Falta de parâmetros nacionais para carga horária e metodologia.</li>
-</ul>
-
-</section>
-
-<section class="section">
-
-<h2>✅ Recomendações da Pesquisa</h2>
+<h2>Público Prioritário</h2>
 
 <ul>
 
-<li>Desenvolver regulamentação específica para a Pré-Aprendizagem.</li>
+<li>Adolescentes e jovens em situação de vulnerabilidade social.</li>
 
-<li>Definir de forma mais precisa seu conceito e objetivos.</li>
+<li>Jovens pertencentes a famílias beneficiárias de programas de transferência de renda.</li>
 
-<li>Estabelecer parâmetros para carga horária e estrutura dos cursos.</li>
+<li>Jovens vinculados à rede socioassistencial.</li>
 
-<li>Diferenciar claramente a Pré-Aprendizagem das ações pedagógicas realizadas durante a Aprendizagem Profissional.</li>
+<li>Jovens egressos ou em cumprimento de medidas socioeducativas.</li>
 
-<li>Priorizar avaliações diagnósticas e formativas, evitando barreiras de acesso.</li>
+<li>Jovens com deficiência.</li>
 
-<li>Ampliar pesquisas sobre impactos da Pré-Aprendizagem na trajetória dos jovens.</li>
+<li>Jovens fora da escola ou com trajetórias educacionais fragilizadas.</li>
 
 </ul>
 
@@ -391,25 +244,159 @@ Ponte entre a escola, os projetos sociais e o mundo do trabalho.
 
 <section class="section">
 
-<h2>📂 Biblioteca do Estudo</h2>
+<h2>Competências Desenvolvidas</h2>
 
-<p>
-Materiais de referência utilizados na construção desta página:
-</p>
+<div class="grid">
+
+<div class="card">
+<h3>🎯 Desenvolvimento Pessoal</h3>
 
 <ul>
-<li>Nota Técnica nº 2718/2026 - Estudo Prospectivo sobre Pré-Aprendizagem.</li>
-<li>Apresentação de análise de dados da Pré-Aprendizagem.</li>
-<li>Portaria MTE nº 3.872/2023.</li>
+<li>Projeto de Vida</li>
+<li>Planejamento de Futuro</li>
+<li>Autoconhecimento</li>
+<li>Juventude e Cidadania</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h3>💼 Mundo do Trabalho</h3>
+
+<ul>
+<li>Currículo</li>
+<li>Processo Seletivo</li>
+<li>Postura Profissional</li>
+<li>Escolha Profissional</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h3>🗣️ Competências Socioemocionais</h3>
+
+<ul>
+<li>Comunicação</li>
+<li>Responsabilidade</li>
+<li>Convivência Social</li>
+<li>Resiliência</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h3>💻 Inclusão Digital</h3>
+
+<ul>
+<li>Informática Básica</li>
+<li>Internet e IA</li>
+<li>Word</li>
+<li>Excel</li>
+<li>PowerPoint</li>
+<li>Canva</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Conexão com a Assistência Social</h2>
+
+<p>
+
+A Pré-Aprendizagem dialoga diretamente com os objetivos da Proteção Social Básica ao
+fortalecer vínculos, desenvolver autonomia, ampliar repertórios, estimular a permanência
+escolar e promover oportunidades de inclusão produtiva.
+
+</p>
+
+<br>
+
+<p>
+
+Embora não seja um serviço socioassistencial tipificado, ela pode atuar de forma complementar
+às ações direcionadas a adolescentes e jovens acompanhados pela rede socioassistencial,
+especialmente aqueles vinculados ao Serviço de Convivência e Fortalecimento de Vínculos (SCFV).
+
+</p>
+
+</section>
+
+<section class="section">
+
+<h2>Jornada do Jovem</h2>
+
+<div class="trilha">
+
+<div class="etapa">Serviço de Convivência</div>
+
+<div class="seta">→</div>
+
+<div class="etapa">Pré-Aprendizagem</div>
+
+<div class="seta">→</div>
+
+<div class="etapa">Aprendizagem Profissional</div>
+
+<div class="seta">→</div>
+
+<div class="etapa">Estágio ou Trabalho</div>
+
+<div class="seta">→</div>
+
+<div class="etapa">Autonomia e Inclusão Produtiva</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Marcos de Referência</h2>
+
+<ul>
+
 <li>Recomendação nº 208 da Organização Internacional do Trabalho (OIT).</li>
+
+<li>Decreto nº 9.579/2018.</li>
+
+<li>Portaria MTE nº 3.872/2023.</li>
+
+<li>Política Nacional de Assistência Social (PNAS).</li>
+
+<li>Lei Orgânica da Assistência Social (LOAS).</li>
+
+<li>Tipificação Nacional dos Serviços Socioassistenciais.</li>
+
 </ul>
 
-<a class="botao" href="pre-aprendizagem.html">
-🌱 Voltar para Pré-Aprendizagem
+</section>
+
+<section class="section">
+
+<h2>Estudos e Pesquisas</h2>
+
+<p>
+
+Aprofunde seus conhecimentos consultando o estudo nacional realizado com entidades formadoras
+sobre conceito, oferta, carga horária e perspectivas para a Pré-Aprendizagem.
+
+</p>
+
+<a class="botao" href="estudo-pre-aprendizagem.html">
+📊 Acessar Estudo Prospectivo sobre Pré-Aprendizagem
 </a>
 
+</section>
+
+<section class="section">
+
 <a class="botao" href="index.html">
-🏠 Voltar para Academia
+🏠 Voltar para Biblioteca
 </a>
 
 </section>
@@ -418,9 +405,10 @@ Materiais de referência utilizados na construção desta página:
 
 <footer>
 
-Academia da Aprendizagem • Biblioteca da Aprendizagem e Inclusão Produtiva
+Biblioteca da Aprendizagem e Inclusão Produtiva
 
 </footer>
 
 </body>
+
 </html>
