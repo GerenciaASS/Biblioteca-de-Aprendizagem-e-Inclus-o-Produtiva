@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resolução CNAS/MDS nº 234/2026 | Biblioteca da Aprendizagem</title>
+
+    <style>
+
+        /* ==============================
+           CORES DA BIBLIOTECA
+        ============================== */
+
+        :root {
+            --azul: #183B66;
+            --azul2: #245B91;
+            --azul-claro: #EAF3FA;
+
+            --laranja: #F28C28;
+            --laranja-claro: #FFF2E5;
+
+            --rosa: #D94F87;
+            --rosa-claro: #FCEAF2;
+
+            --roxo: #7856A8;
+            --roxo-claro: #F1EBF8;
+
+            --verde: #37866B;
+            --verde-claro: #EAF6F1;
+
+            --texto: #263238;
+            --texto-secundario: #5D6972;
+
+            --cinza: #F6F8FA;
+            --borda: #DFE6EC;
+            --branco: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: var(--texto);
+            background: #F8FAFC;
+            line-height: 1.65;
+        }
+
+        a {
+            color: inherit;
+        }
+
+
+        /* ==============================
+           TOPO
+        ============================== */
+
+        .topbar {
+            background: #102D4D;
+            color: white;
+            padding: 13px 22px;
+        }
+
+        .topbar-content {
+            max-width: 1180px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .biblioteca-nome {
+            font-size: 0.94rem;
+            font-weight: 600;
+        }
+
+        .voltar {
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: .9;
+        }
+
+        .voltar:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+            background:
+                radial-gradient(circle at 90% 10%,
+                    rgba(242,140,40,.28),
+                    transparent 25%),
+                radial-gradient(circle at 15% 90%,
+                    rgba(217,79,135,.22),
+                    transparent 27%),
+                linear-gradient(135deg, #173B65, #315B92 55%, #73539C);
+
+            color: white;
+            padding: 72px 24px 82px;
+        }
+
+        .hero-content {
+            max-width: 1180px;
+            margin: auto;
+        }
+
+        .categoria {
+            display: inline-block;
+            padding: 7px 15px;
+            border-radius: 30px;
+            background: rgba(255,255,255,.15);
+            border: 1px solid rgba(255,255,255,.30);
+            font-size: .83rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: .3px;
+        }
+
+        .hero h1 {
+            font-size: 2.65rem;
+            line-height: 1.15;
+            margin-bottom: 17px;
+            max-width: 900px;
+        }
+
+        .hero p {
+            max-width: 850px;
+            color: #F1F6FA;
+            font-size: 1.14rem;
+        }
+
+        .hero-info {
+            margin-top: 28px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-info span {
+            padding: 8px 14px;
+            border-radius: 7px;
+            background: rgba(0,0,0,.15);
+            font-size: .87rem;
+        }
+
+
+        /* ==============================
+           CONTAINER
+        ============================== */
+
+        main {
+            max-width: 1180px;
+            margin: auto;
+            padding: 46px 24px 80px;
+        }
+
+        section {
+            margin-bottom: 55px;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--azul);
+            margin-bottom: 13px;
+        }
+
+        h3 {
+            color: var(--azul);
+        }
+
+        .subtitulo {
+            color: var(--texto-secundario);
+            max-width: 900px;
+            margin-bottom: 25px;
+        }
+
+
+        /* ==============================
+           NAVEGAÇÃO
+        ============================== */
+
+        .indice {
+            background: white;
+            border: 1px solid var(--borda);
+            border-radius: 16px;
+            padding: 22px 24px;
+            margin-top: -72px;
+            position: relative;
+            box-shadow: 0 8px 28px rgba(30,55,80,.10);
+            margin-bottom: 50px;
+        }
+
+        .indice strong {
+            display: block;
+            color: var(--azul);
+            margin-bottom: 13px;
+        }
+
+        .indice-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .indice a {
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 20px;
+            background: var(--cinza);
+            color: var(--azul);
+            font-size: .84rem;
+            transition: .2s;
+        }
+
+        .indice a:hover {
+            background: var(--azul);
+            color: white;
+        }
+
+
+        /* ==============================
+           DESTAQUE PRINCIPAL
+        ============================== */
+
+        .conceito-central {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--azul-claro),
+                    #F5F0FA
+                );
+
+            border-left: 6px solid var(--roxo);
+            border-radius: 13px;
+            padding: 27px 30px;
+            margin: 25px 0;
+        }
+
+        .conceito-central h3 {
+            color: var(--roxo);
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+
+        /* ==============================
+           CARDS
+        ============================== */
+
+        .grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid var(--borda);
+            border-radius: 15px;
+            padding: 24px;
+            box-shadow: 0 4px 16px rgba(0,0,0,.035);
+            transition: .2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 9px 24px rgba(0,0,0,.07);
+        }
+
+        .card h3 {
+            font-size: 1.08rem;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: var(--texto-secundario);
+            font-size: .94rem;
+        }
+
+        .icone {
+            width: 43px;
+            height: 43px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 11px;
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .icone.azul {
+            background: var(--azul-claro);
+        }
+
+        .icone.laranja {
+            background: var(--laranja-claro);
+        }
+
+        .icone.rosa {
+            background: var(--rosa-claro);
+        }
+
+        .icone.roxo {
+            background: var(--roxo-claro);
+        }
+
+        .icone.verde {
+            background: var(--verde-claro);
+        }
+
+
+        /* ==============================
+           FAIXAS / ALERTAS
+        ============================== */
+
+        .alerta {
+            border-radius: 14px;
+            padding:
