@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lei nº 14.819/2024 | Biblioteca da Aprendizagem</title>
+
+  <style>
+    :root {
+      --azul: #123a63;
+      --azul-claro: #eaf2f8;
+      --azul-medio: #2f6f9f;
+      --verde: #2e7d6b;
+      --verde-claro: #eaf7f3;
+      --amarelo: #f5b942;
+      --cinza: #f5f7f9;
+      --texto: #263238;
+      --texto-secundario: #5f6b73;
+      --branco: #ffffff;
+      --borda: #dfe6eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f7f9fb;
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: linear-gradient(135deg, #123a63, #286a8e);
+      color: white;
+      padding: 65px 24px;
+    }
+
+    .hero-conteudo {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 30px;
+      padding: 6px 14px;
+      margin-bottom: 18px;
+      font-size: .85rem;
+      font-weight: 600;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: 2.5rem;
+      line-height: 1.15;
+    }
+
+    .hero p {
+      max-width: 800px;
+      font-size: 1.12rem;
+      color: #eef6fb;
+      margin-bottom: 0;
+    }
+
+    /* CONTEÚDO */
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 42px 24px 70px;
+    }
+
+    section {
+      margin-bottom: 42px;
+    }
+
+    h2 {
+      color: var(--azul);
+      font-size: 1.65rem;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      color: var(--azul);
+    }
+
+    .introducao {
+      font-size: 1.06rem;
+      color: var(--texto-secundario);
+      max-width: 900px;
+    }
+
+    /* CARDS */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--borda);
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 4px 18px rgba(0,0,0,.04);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.05rem;
+    }
+
+    .numero {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--azul-claro);
+      color: var(--azul);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    /* DESTAQUE */
+
+    .destaque {
+      background: var(--verde-claro);
+      border-left: 5px solid var(--verde);
+      padding: 24px 26px;
+      border-radius: 8px;
+      margin: 28px 0;
+    }
+
+    .destaque h3 {
+      color: var(--verde);
+      margin-top: 0;
+    }
+
+    /* LISTAS */
+
+    .lista {
+      background: white;
+      border-radius: 14px;
+      border: 1px solid var(--borda);
+      padding: 25px 30px;
+    }
+
+    .lista li {
+      margin-bottom: 10px;
+    }
+
+    /* INTERSETORIALIDADE */
+
+    .intersetorialidade {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .eixo {
+      padding: 25px 20px;
+      text-align: center;
+      border-radius: 14px;
+      font-weight: 600;
+    }
+
+    .educacao {
+      background: #eaf2f8;
+      color: #174c73;
+    }
+
+    .saude {
+      background: #eaf7f3;
+      color: #236b5b;
+    }
+
+    .assistencia {
+      background: #fff5dd;
+      color: #805c08;
+    }
+
+    /* ARTIGOS */
+
+    .artigo {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--borda);
+    }
+
+    .artigo:last-child {
+      border-bottom: none;
+    }
+
+    .artigo strong {
+      color: var(--azul);
+    }
+
+    /* BOTÃO */
+
+    .botao {
+      display: inline-block;
+      background: var(--azul);
+      color: white;
+      text-decoration: none;
+      padding: 13px 20px;
+      border-radius: 7px;
+      font-weight: 600;
+      margin-top: 12px;
+      transition: .2s;
+    }
+
+    .botao:hover {
+      background: #0b2947;
+    }
+
+    /* FONTE */
+
+    .fonte {
+      background: var(--cinza);
+      border-radius: 12px;
+      padding: 22px;
+      font-size: .93rem;
+    }
+
+    .fonte a {
+      color: var(--azul-medio);
+      font-weight: 600;
+    }
+
+    footer {
+      background: #102f4c;
+      color: #dbe7ef;
+      text-align: center;
+      padding: 25px;
+      font-size: .9rem;
+    }
+
+    @media(max-width: 700px) {
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .hero {
+        padding: 45px 20px;
+      }
+
+      .intersetorialidade {
+        grid-template-columns: 1fr;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="hero">
+  <div class="hero-conteudo">
+
+    <span class="tag">Legislação • Educação • Saúde Mental</span>
+
+    <h1>Lei nº 14.819/2024</h1>
+
+    <p>
+      Institui a Política Nacional de Atenção Psicossocial nas
+      Comunidades Escolares e fortalece a articulação entre educação,
+      saúde e assistência social.
+    </p>
+
+  </div>
+</header>
+
+<main>
+
+  <!-- SOBRE -->
+
+  <section>
+
+    <h2>Sobre a Lei</h2>
+
+    <p class="introducao">
+      A Lei nº 14.819, de 16 de janeiro de 2024, institui a
+      <strong>Política Nacional de Atenção Psicossocial nas Comunidades Escolares</strong>.
+      A política propõe uma atuação permanente e articulada entre as áreas
+      de educação, saúde e assistência social para o desenvolvimento de
+      ações de promoção, prevenção e atenção psicossocial no ambiente escolar.
+    </p>
+
+    <div class="destaque">
+
+      <h3>Um olhar integral para a comunidade escolar</h3>
+
+      <p>
+        A legislação reconhece que o cuidado com a saúde mental não é
+        responsabilidade exclusiva de uma única política pública.
+        A atenção psicossocial deve acontecer de maneira articulada,
+        envolvendo diferentes serviços, profissionais, estudantes,
+        famílias e a própria comunidade.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- QUEM COMPÕE -->
+
+  <section>
+
+    <h2>Quem integra a comunidade escolar?</h2>
+
+    <p>
+      Para os efeitos da Lei, a comunidade escolar envolve diferentes
+      atores que participam do cotidiano educacional.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="numero">1</div>
+        <h3>Alunos</h3>
+        <p>
+          Estudantes são reconhecidos como integrantes centrais da
+          comunidade escolar e sujeitos ativos das ações de atenção
+          psicossocial.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="numero">2</div>
+        <h3>Professores</h3>
+        <p>
+          Profissionais responsáveis pelo processo educativo e que também
+          integram as estratégias de promoção da saúde mental.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="numero">3</div>
+        <h3>Profissionais da escola</h3>
+        <p>
+          Demais profissionais que atuam no ambiente escolar também fazem
+          parte das ações previstas pela política.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="numero">4</div>
+        <h3>Pais e responsáveis</h3>
+        <p>
+          As famílias e responsáveis pelos estudantes também integram a
+          comunidade escolar considerada pela legislação.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- OBJETIVOS -->
+
+  <section>
+
+    <h2>Principais objetivos</h2>
+
+    <div class="lista">
+
+      <ul>
+        <li>Promover a saúde mental da comunidade escolar.</li>
+
+        <li>
+          Garantir acesso à atenção psicossocial aos integrantes
+          da comunidade escolar.
+        </li>
+
+        <li>
+          Fortalecer a intersetorialidade entre educação, saúde
+          e assistência social.
+        </li>
+
+        <li>
+          Sensibilizar a sociedade sobre a importância dos
+          cuidados psicossociais.
+        </li>
+
+        <li>
+          Promover formação continuada de gestores e profissionais
+          das áreas de educação, saúde e assistência social.
+        </li>
+
+        <li>
+          Promover atendimentos, ações e palestras direcionadas
+          à eliminação da violência.
+        </li>
+
+        <li>
+          Divulgar informações cientificamente verificadas
+          relacionadas à saúde mental.
+        </li>
+      </ul>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTERSETORIALIDADE -->
+
+  <section>
+
+    <h2>A intersetorialidade no centro da política</h2>
+
+    <p class="introducao">
+      Um dos principais elementos da Lei é a articulação permanente
+      entre diferentes políticas públicas.
+    </p>
+
+    <div class="intersetorialidade">
+
+      <div class="eixo educacao">
+        Educação
+      </div>
+
+      <div class="eixo saude">
+        Saúde
+      </div>
+
+      <div class="eixo assistencia">
+        Assistência Social
+      </div>
+
+    </div>
+
+    <div class="destaque">
+
+      <h3>Rede de proteção</h3>
+
+      <p>
+        A legislação prevê integração entre a comunidade escolar,
+        equipes de atenção primária à saúde e serviços de proteção
+        social existentes no território.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- DIRETRIZES -->
+
+  <section>
+
+    <h2>Diretrizes da política</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Participação</h3>
+        <p>
+          Envolvimento da comunidade escolar e da comunidade
+          do território onde a escola está inserida.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Atuação multidisciplinar</h3>
+        <p>
+          Desenvolvimento de ações com abordagem multidisciplinar
+          e intersetorial.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Integração territorial</h3>
+        <p>
+          Articulação das escolas com atenção primária à saúde
+          e serviços de proteção social.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Diversidade</h3>
+        <p>
+          Garantia da não discriminação e do respeito à diversidade.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Protagonismo dos estudantes</h3>
+        <p>
+          Participação dos alunos como sujeitos ativos na construção
+          das ações de atenção psicossocial.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Direitos humanos</h3>
+        <p>
+          Promoção da cidadania e respeito aos direitos humanos
+          como princípios orientadores das ações.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- APRENDIZAGEM -->
+
+  <section>
+
+    <h2>Por que essa Lei é importante para a Aprendizagem Profissional?</h2>
+
+    <p class="introducao">
+      Embora a Lei tenha como foco as comunidades escolares, ela dialoga
+      diretamente com o trabalho desenvolvido com adolescentes e jovens,
+      especialmente quando pensamos na permanência escolar, proteção social,
+      desenvolvimento integral e construção de redes de apoio.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Saúde mental das juventudes</h3>
+        <p>
+          Reforça a importância de reconhecer a saúde mental como parte
+          do desenvolvimento integral de adolescentes e jovens.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Permanência escolar</h3>
+        <p>
+          O acompanhamento do jovem não deve considerar apenas sua inserção
+          profissional, mas também sua trajetória educacional e social.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Rede de proteção</h3>
+        <p>
+          Situações identificadas no acompanhamento de adolescentes e jovens
+          podem exigir articulação com escola, família, saúde e serviços
+          socioassistenciais do território.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Formação integral</h3>
+        <p>
+          A atenção psicossocial se conecta a uma perspectiva de formação
+          que considera diferentes dimensões da vida e do desenvolvimento
+          das juventudes.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="destaque">
+
+      <h3>Para pensar na prática</h3>
+
+      <p>
+        No acompanhamento de jovens aprendizes, sinais relacionados a
+        sofrimento emocional, dificuldades escolares, situações de violência
+        ou vulnerabilidade social não devem ser analisados de forma isolada.
+        A perspectiva intersetorial ajuda a compreender quando é necessário
+        articular outros atores da rede de proteção e atendimento.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONSULTA -->
+
+  <section>
+
+    <h2>Consulte a legislação</h2>
+
+    <div class="fonte">
+
+      <strong>Lei nº 14.819, de 16 de janeiro de 2024</strong>
+
+      <p>
+        Institui a Política Nacional de Atenção Psicossocial
+        nas Comunidades Escolares.
+      </p>
+
+      <a
+        class="botao"
+        href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14819.htm"
+        target="_blank"
+        rel="noopener noreferrer">
+        Acessar texto oficial no Planalto
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+  Biblioteca da Aprendizagem e Inclusão Produtiva
+</footer>
+
+</body>
+</html>
